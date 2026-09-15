@@ -1,0 +1,8 @@
+interface:
+  display_name: "Video Compression"
+  short_description: "Compress and find useful video clips locally"
+  default_prompt: "Use $video-compression to compress a local video and optionally suggest valuable clips."
+
+policy:
+  allow_implicit_invocation: true
+

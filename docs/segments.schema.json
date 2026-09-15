@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/krishanraja/video-compression/blob/main/docs/segments.schema.json",
+  "title": "Video Compression Segments",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["segments"],
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Optional source path recorded for traceability"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "What makes these segments valuable"
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["start", "end", "title", "reason"],
+        "properties": {
+          "start": {
+            "oneOf": [{"type": "number", "minimum": 0}, {"type": "string"}]
+          },
+          "end": {
+            "oneOf": [{"type": "number", "exclusiveMinimum": 0}, {"type": "string"}]
+          },
+          "title": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1},
+          "confidence": {"type": "string", "enum": ["low", "medium", "high"]}
+        }
+      }
+    }
+  }
+}
+

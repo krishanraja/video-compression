@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-compression-engine"
+version = "0.1.0"
+description = "Local-first video compression, review, and segment tooling for ChatGPT Work"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Krishan Raja" }]
+keywords = ["video", "ffmpeg", "compression", "chatgpt", "codex"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.scripts]
+video-compress = "video_compression.cli:entrypoint"
+
+[project.urls]
+Homepage = "https://github.com/krishanraja/video-compression"
+Issues = "https://github.com/krishanraja/video-compression/issues"
+
+[tool.setuptools]
+packages = ["video_compression"]

@@ -1,0 +1,14 @@
+{
+  "source": "/path/to/video.mp4",
+  "purpose": "A concise social clip that contains a complete useful idea",
+  "segments": [
+    {
+      "start": "00:02:14.5",
+      "end": "00:03:06.0",
+      "title": "The useful idea",
+      "reason": "A self-contained explanation aligned with the stated purpose",
+      "confidence": "high"
+    }
+  ]
+}
+

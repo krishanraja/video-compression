@@ -1,0 +1,33 @@
+name: learning-intake
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  acknowledge:
+    if: contains(github.event.issue.labels.*.name, 'session-feedback')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const hasPrivacy = body.includes('[x]') || body.includes('[X]');
+            if (!hasPrivacy) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: context.issue.number,
+                body: 'The privacy confirmation is missing. Please remove private paths, credentials, media content, and sensitive personal information before triage.'
+              });
+              return;
+            }
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body: 'Feedback received. A reusable learning is complete only when it is represented by a regression test, code fix, documentation change, or skill update and independently verified.'
+            });
+

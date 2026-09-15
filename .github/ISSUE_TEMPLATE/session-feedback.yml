@@ -1,0 +1,38 @@
+name: Session feedback
+description: Submit a sanitized review from a video compression session
+title: "Session feedback: "
+labels: ["session-feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping the engine learn. Describe the user-visible problem, not private video content. Remove personal paths, share-link query strings, credentials, names, and sensitive transcript excerpts.
+  - type: textarea
+    id: session-summary
+    attributes:
+      label: Session summary
+      description: What was the user trying to do, and what happened?
+      placeholder: Paste the generated session review here.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reusable-learning
+    attributes:
+      label: Proposed reusable learning
+      description: What code, test, documentation, or skill change might prevent recurrence?
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed private media content, private paths, credentials, and sensitive personal information.
+          required: true
+
