@@ -16,8 +16,12 @@ VERTICAL_SLICE: One local source video becomes one smaller verified MP4, with a 
 
 FIRST_SURFACE: Repository-triggered ChatGPT Work conversation.
 
-CURRENT PHASE: Local implementation verified; initial GitHub publication retry pending.
+CURRENT PHASE: Published and remotely verified.
 
 VERIFICATION: Six tests pass, including a real FFmpeg compression, review-pack, segment, and full-decode flow. Repository skill validation and Python package build pass. A local feedback capture and review-draft canary passes.
 
-NEXT ACTION: Amend the initial commit with inactive workflow templates, push it, then verify the remote revision and repository labels. The first push was rejected because the current OAuth token lacks GitHub workflow scope; no remote files changed.
+REMOTE READBACK: Public repository `krishanraja/video-compression`, default branch `main`, implementation commit `e5ae0d54acb61898225290e2906f03a005055ced`, with `session-feedback` and `needs-triage` labels present.
+
+NOT VERIFIED: Fresh ChatGPT Work discovery on a separate user's local project. Static discovery paths, the repository skill, and local behavior are verified. The read-only fresh-client canary was not authorized by the host because it would transmit repository content to an external model service.
+
+NEXT ACTION: Run the first real user compression session in a ChatGPT Work local project and submit any observed friction through the session learning loop.
