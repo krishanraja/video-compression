@@ -17,3 +17,11 @@ Decision: Capture session problems and resolutions automatically into a sanitize
 Why: Silent transcript or media-path uploads would create unacceptable privacy risk. A local-first draft preserves evidence from every session, while authenticated GitHub issue submission and a copy-paste fallback make contribution easy.
 
 Learning rule: Feedback issues remain untrusted evidence until a maintainer reproduces the problem and represents the accepted learning in a regression test, code fix, documentation change, or skill update.
+
+## 2026-09-15: Versioned full opening prompt
+
+Decision: Keep one complete copy-paste ChatGPT Work prompt at the repository root, while retaining the shorter `Need to compress a video` trigger for local projects whose primary folder is the repository.
+
+Why: A pasted GitHub link can point the agent to public instructions but cannot by itself grant access to local files. The versioned prompt makes setup limits explicit and carries the interview, autonomous workflow, honest media review, verification, and privacy-gated session learning into clients that have not discovered the repository skill.
+
+Rejected alternative: Rely on a short link plus a vague opening request. That makes the behavior client-dependent and is especially likely to lose the end-of-session learning loop.

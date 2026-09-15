@@ -11,7 +11,7 @@ Turn a source video into a smaller verified local file, with optional purpose-al
 
 Ask only for information that is still missing, one concise question at a time:
 
-1. Ask where the video is stored. Accept a local path, an attached file, or a share link. For a local path outside the project, let ChatGPT Work request access or ask the user to attach its folder to the local project. For a link, explain the exact download target before downloading.
+1. Ask where the video is stored. Accept either a cloud-drive share URL or a local file path, as well as an attached file. For a local path, use it when the containing folder is attached or otherwise permitted and let ChatGPT Work request the user's local machine access approval when required. For a cloud URL, use it when its link permissions or the correct signed-in account or connector allow access, and explain the exact local download target before downloading. If access fails, identify the single missing permission or attachment precisely.
 2. Ask what the result is for. If the user is unsure, offer the relevant examples: messaging or Drive sharing, email, universal playback, social upload, web delivery, archive, or later editing. Ask for a hard file-size limit only when the platform imposes one.
 3. Ask whether they want suggested cuts as well as compression. If yes, ask for a preferred clip length only when the purpose does not make it clear.
 

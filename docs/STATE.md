@@ -14,14 +14,14 @@ SURFACE_DEPENDENCIES: Chat interview -> local file access -> probe and encoder c
 
 VERTICAL_SLICE: One local source video becomes one smaller verified MP4, with a sample-based size estimate before the full run.
 
-FIRST_SURFACE: Repository-triggered ChatGPT Work conversation.
+FIRST_SURFACE: Repository-triggered ChatGPT Work conversation, with a complete versioned copy-paste prompt as the fallback entry route.
 
 CURRENT PHASE: Published and remotely verified.
 
-VERIFICATION: Six tests pass, including a real FFmpeg compression, review-pack, segment, and full-decode flow. Repository skill validation and Python package build pass. A local feedback capture and review-draft canary passes.
+VERIFICATION: Eight tests pass, including a real FFmpeg compression, review-pack, segment, and full-decode flow plus the full opening-prompt access and safety contract. Repository skill validation and Python package build pass. A local feedback capture and review-draft canary passes.
 
 REMOTE READBACK: Public repository `krishanraja/video-compression`, default branch `main`, implementation commit `e5ae0d54acb61898225290e2906f03a005055ced`, with `session-feedback` and `needs-triage` labels present.
 
 NOT VERIFIED: Fresh ChatGPT Work discovery on a separate user's local project. Static discovery paths, the repository skill, and local behavior are verified. The read-only fresh-client canary was not authorized by the host because it would transmit repository content to an external model service.
 
-NEXT ACTION: Run the first real user compression session in a ChatGPT Work local project and submit any observed friction through the session learning loop.
+NEXT ACTION: Run the first real user compression session from `COPY-PASTE-PROMPT.md` using either a permitted cloud-drive URL or an approved local file path, then submit any observed friction through the session learning loop.

@@ -6,6 +6,10 @@ No video is uploaded by this engine. The source is preserved. FFmpeg does the me
 
 ## Fastest start in ChatGPT Work
 
+There are two supported ways to start.
+
+### With the repository attached
+
 1. Clone this repository.
 2. Create a local project in the ChatGPT desktop app with this repository as the primary folder.
 3. Add the folder containing the source video as another project folder when it is outside the repository.
@@ -15,7 +19,11 @@ No video is uploaded by this engine. The source is preserved. FFmpeg does the me
 
 The repository's `AGENTS.md` and `.agents/skills/video-compression` skill are discovered automatically from the primary folder. The agent asks where the video is stored, what it is for, and whether you want suggested cuts. It then probes the file, estimates output size from representative samples, creates an optional review pack, compresses locally, and fully verifies the output.
 
-A remote GitHub project can read the repository, but local media access requires a local project or another local execution environment with the video folder attached. ChatGPT Work's sandbox controls the actual file-access approval.
+### With a copy-paste opening prompt
+
+Paste the complete [ChatGPT Work opening prompt](COPY-PASTE-PROMPT.md) into a new task. It contains the setup check, guided interview, autonomous compression workflow, honest media-review rules, output verification, and sanitized session-feedback loop in one reusable prompt.
+
+The source can be supplied as either a cloud-drive share URL or a local file path. A cloud URL requires valid link, signed-in account, or connector permissions. A local path requires a local project or another local execution environment with the containing folder attached or permitted. ChatGPT Work controls the actual file-access approval.
 
 ## Simple terminal command
 
